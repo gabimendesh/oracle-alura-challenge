@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Cripto</title>
+    <title>CifraMensagem</title>
   </head>
   <body>
-    <header>
-      <h1>Hello Cripto</h1>
+    <header class="header">
+      <h1 class="header__title">CifraMensagem</h1>
     </header>
     <main>
-      <div>
+      <div class="container">
         <section>
           <div class="container__cipher">
-            <p>Escreva a mensagem para codificar</p>
+            <p class="container__subtitle">Escreva a mensagem para codificar</p>
             <textarea
-              class="container__cipher--code"
-              name=""
-              id=""
-              cols="30"
-              rows="10"
+            class="container__cipher--encode"
+              autocomplete="off"
+              maxlength="1000"
+              minlenght="1"
+              placeholder="Escreva um texto para ser codificado"
+              required
+            ></textarea>
+            <textarea
+            class="container__cipher--decode"
+              autocomplete="off"
+              maxlength="1000"
+              minlenght="1"
+              placeholder="Escreva um texto para ser decodificado"
+              required
             ></textarea>
           </div>
-          <div class="container__cipher">
-            <textarea
-              class="container__cipher--decode"
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-          <div class="container__cipher--decode">
-            <button type="button" class="container__button--code">
+          <div class="container__button">
+            <button type="button" class="container__button--encode">
               Codificar
             </button>
-          </div>
-          <div>
             <button type="button" class="container__button--decode">
               Decodificar
             </button>
+          <div>
           </div>
         </section>
       </div>
     </main>
-    <footer>Desenvolvido por Gabrielly Mendes</footer>
+    <footer>
+      Desenvolvido por
+      <a
+      href="https://github.com/gabimendesh"
+      target="_blank"
+      >
+      Gabrielly Mendes
+    </a> n
+    o desafio Oracle ONE + Alura 2022
+    </footer>
     <script src="../app.js" type="module"></script>
   </body>
 </html>
