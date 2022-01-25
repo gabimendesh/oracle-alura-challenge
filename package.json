@@ -1,0 +1,11 @@
+{
+  "name": "challenge-oracle-decoder",
+  "version": "1.0.0",
+  "description": "Codificador de mensagens de texto. Projeto desenvolvido durante o desafio front-end Oracle + Alura.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabrielly Mendes",
+  "license": "ISC"
+}
