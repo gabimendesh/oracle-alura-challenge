@@ -1,17 +1,19 @@
 import cipher from "./src/index.js";
 
 function encodeText() {
-  const text = document.querySelector(".container__cipher--code").value;
-  document.querySelector('.container__cipher--decode').value = cipher.encode(text);
+  const text = document.querySelector(".container__cipher--encode");
+  document.querySelector('.container__cipher--decode').value = cipher
+    .encode(text.value.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z\s])/g, ''));
 }
 
 function decodeText() {
-  const text = document.querySelector(".container__cipher--decode").value;
-  document.querySelector('.container__cipher--code').value = cipher.decode(text);
+  const text = document.querySelector(".container__cipher--decode");
+  document.querySelector('.container__cipher--encode').value = cipher
+    .decode(text.value.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z\s])/g, ''));
 }
 
 
-const encodeButton = document.querySelector(".container__button--code");
+const encodeButton = document.querySelector(".container__button--encode");
 encodeButton.addEventListener("click", encodeText);
 
 
